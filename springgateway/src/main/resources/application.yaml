@@ -2,15 +2,19 @@ spring:
   application:
     name: springgateway
   cloud:
+    discovery:
+      enabled: true
     gateway:
       enabled: true
       routes:
         - id: msone
-          uri: lb://msone
+          uri: lb://MSONE
           predicates:
-            - Path=/asd/**
+            - Path=/msone/**
 
 eureka:
+  instance:
+    hostname: localhost
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
