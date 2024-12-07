@@ -1,4 +1,4 @@
-package com.rafaelnarnajo.msone.infrastructure.in.api.dto;
+package com.rafaelnarnajo.msone.infrastructure.in.api.exceptions;
 
 public class InfraestructureException extends RuntimeException {
     public InfraestructureException() {

@@ -1,4 +1,7 @@
 spring:
+  main:
+    web-application-type: reactive
+    allow-bean-definition-overriding: true
   application:
     name: springgateway
   cloud:
@@ -10,8 +13,15 @@ spring:
         - id: msone
           uri: lb://MSONE
           predicates:
-            - Path=/msone/**
+            - Path=/api/v1/**
+          filters:
+            - UpdateExchangeGatewayPostFilter=
 
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8484/realms/architec-project-local
 eureka:
   instance:
     hostname: localhost

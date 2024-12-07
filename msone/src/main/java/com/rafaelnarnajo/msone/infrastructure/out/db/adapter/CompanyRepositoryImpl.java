@@ -2,7 +2,6 @@ package com.rafaelnarnajo.msone.infrastructure.out.db.adapter;
 
 import com.rafaelnarnajo.msone.application.port.out.db.CompanyStore;
 import com.rafaelnarnajo.msone.application.port.out.db.dto.CompanyOutDto;
-import com.rafaelnarnajo.msone.infrastructure.in.api.dto.InfraestructureException;
 import com.rafaelnarnajo.msone.infrastructure.out.db.converter.CompanyOutConverter;
 import com.rafaelnarnajo.msone.infrastructure.out.db.repository.CompanyJpaRepository;
 
